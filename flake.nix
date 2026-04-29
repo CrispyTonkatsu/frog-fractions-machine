@@ -23,6 +23,8 @@
 
           packages = with pkgs; [
             rsync
+            tigervnc
+
             (callPackage ./utils/deploy-script.nix { })
             (callPackage ./utils/deploy-boot-script.nix { })
           ];

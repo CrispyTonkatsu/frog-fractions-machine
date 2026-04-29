@@ -16,12 +16,6 @@
     "flakes"
   ];
 
-  # Message to let people know they need to start the display themselves
-  users.motd = ''
-    Frog Fractions peak
-    To start the desktop run startx
-  '';
-
   users.users.admin = {
     isNormalUser = true;
     description = "frog fractions";
