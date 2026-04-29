@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  # TODO: Set up the vnc here so that people can connect to the display and see what the computer is doing
+  # TODO: Left off here setting up the VNC
 
   systemd.services.x11vnc = {
     description = "vnc server for x11";
