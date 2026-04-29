@@ -1,5 +1,8 @@
 { ... }:
 {
+  networking.hostName = "frog-fractions";
+  networking.networkmanager.enable = true;
+
   services.openssh = {
     enable = true;
     settings = {
@@ -18,7 +21,7 @@
   };
 
   # Thunderbolt network
-  # TODO: Get this working
+  # TODO: Get this working so that it can be used at digipen
 
   networking = {
     interfaces.thunderbolt0.ipv4.addresses = [

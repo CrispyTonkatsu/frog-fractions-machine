@@ -8,6 +8,7 @@
 
     # NOTE: The team usage modules
     ./modules/remote-deploy.nix
+    ./modules/remote-desktop.nix
   ];
 
   nix.settings.experimental-features = [
@@ -15,8 +16,11 @@
     "flakes"
   ];
 
-  networking.hostName = "frog-fractions";
-  networking.networkmanager.enable = true;
+  # Message to let people know they need to start the display themselves
+  users.motd = ''
+    Frog Fractions peak
+    To start the desktop run startx
+  '';
 
   users.users.admin = {
     isNormalUser = true;

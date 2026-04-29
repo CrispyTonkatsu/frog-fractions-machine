@@ -3,7 +3,7 @@ stdenv.mkDerivation {
   pname = "Deployer";
   version = "1.0";
 
-  # TODO: Maybe make the deployment not rely on this hardcoded key location and name or something
+  # TODO: Maybe make the deployment not rely on this hardcoded key location and name
   src = pkgs.writeScript "deploy.sh" ''
     #!/bin/bash
 
