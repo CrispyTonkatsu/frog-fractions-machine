@@ -19,11 +19,11 @@
       in
       {
         devShells.default = pkgs.mkShell {
+          name = "frog-fractions builder";
 
-          # TODO: Package to send the image so that it is easier
           packages = with pkgs; [
             rsync
-            ./utils/deploy-script.nix
+            (callPackage ./utils/deploy-script.nix { })
           ];
         };
       }
