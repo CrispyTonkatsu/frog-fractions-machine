@@ -24,6 +24,7 @@
           packages = with pkgs; [
             rsync
             (callPackage ./utils/deploy-script.nix { })
+            (callPackage ./utils/deploy-boot-script.nix { })
           ];
         };
       }
