@@ -23,10 +23,11 @@
 
           packages = with pkgs; [
             rsync
-            tigervnc
+            wlvncc
 
             (callPackage ./utils/deploy-script.nix { })
             (callPackage ./utils/deploy-boot-script.nix { })
+            (callPackage ./utils/connect-display.nix { })
           ];
         };
       }

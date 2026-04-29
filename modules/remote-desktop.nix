@@ -3,10 +3,10 @@
   # TODO: Set up the vnc here so that people can connect to the display and see what the computer is doing
 
   systemd.services.x11vnc = {
-    description = "vnc x11 server";
+    description = "vnc server for x11";
 
-    after = [ "graphical.target" ];
-    wantedBy = [ "multi-user.target" ];
+    after = [ "display-manager.service" ];
+    requires = [ "display-manager.service" ];
 
     serviceConfig = {
       ExecStart = "${pkgs.x11vnc}/bin/x11vnc -display :0 -auth guess -forever -noxdamage -repeat -rfbport 5900 -shared -localhost";
@@ -14,8 +14,5 @@
 
       Restart = "on-failure";
     };
-
   };
-
-  networking.firewall.allowedTCPPorts = [ 5900 ];
 }

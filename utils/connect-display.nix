@@ -9,15 +9,15 @@ stdenv.mkDerivation {
 
     export SSH_KEY="~/.ssh/id_build_server"
 
-    ssh -L 5900:localhost:5900 erina@frog-fractions.local -i $SSH_KEY
+    ssh -L 5900:localhost:5900 root@frog-fractions.local -i $SSH_KEY
 
-    ${pkgs.tigervnc}/bin/tigervnc localhost:5900
+    ${pkgs.wlvncc}/bin/wlvncc localhost:5900
   '';
 
   unpackPhase = "true";
 
   installPhase = ''
     mkdir -p $out/bin
-    cp $src $out/bin/deploy-boot
+    cp $src $out/bin/connect-display
   '';
 }
