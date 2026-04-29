@@ -40,6 +40,7 @@
 
         modules = [
           ./configuration.nix
+          ./modules/hardware-configuration.nix
         ];
       };
     };

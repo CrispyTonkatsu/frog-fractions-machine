@@ -11,8 +11,6 @@
     };
   };
 
-  boot.kernelModules = [ "thunderbolt-net" ];
-
   networking = {
     interfaces.thunderbolt0.ipv4.addresses = [
       {
