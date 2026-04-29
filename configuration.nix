@@ -1,8 +1,12 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   imports = [
+    # NOTE: The system modules
     ./modules/system.nix
     ./modules/networking.nix
+    ./modules/desktop.nix
+
+    # NOTE: The team usage modules
     ./modules/remote-deploy.nix
   ];
 
