@@ -29,7 +29,7 @@
 
   environment.systemPackages = with pkgs; [
     fastfetchMinimal
-    turbovnc
+    wayvnc
   ];
 
   system.stateVersion = "25.11";

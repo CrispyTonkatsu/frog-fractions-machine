@@ -1,23 +1,6 @@
-{ pkgs, ... }:
+{ ... }:
 {
-  services.greetd = {
-    enable = true;
-
-    settings = {
-      default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time";
-        user = "greeter";
-      };
-    };
-  };
-
-  services.xserver = {
-    enable = true;
-
-    displayManager.startx.enable = true;
-
-    desktopManager.xfce = {
-      enable = true;
-    };
-  };
+  # Enabling the stuff for COSMIC
+  services.displayManager.cosmic-greeter.enable = true;
+  services.desktopManager.cosmic.enable = true;
 }
