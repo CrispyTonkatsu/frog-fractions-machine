@@ -10,7 +10,7 @@ stdenv.mkDerivation {
     export SSH_KEY="~/.ssh/id_build_server"
     export NIX_SSHOPTS="-i $SSH_KEY"
 
-    nixos-rebuild boot --flake ./#default --target-host root@frog-fractions
+    nixos-rebuild boot --flake ./#default --target-host root@frog-fractions.local
   '';
 
   unpackPhase = "true";

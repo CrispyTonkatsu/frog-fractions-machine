@@ -23,7 +23,7 @@
 
           packages = with pkgs; [
             rsync
-            wlvncc
+            kdePackages.krdc
 
             (callPackage ./utils/deploy-script.nix { })
             (callPackage ./utils/deploy-boot-script.nix { })
