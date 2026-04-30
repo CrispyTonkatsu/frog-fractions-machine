@@ -1,4 +1,7 @@
 { pkgs, stdenv, ... }:
+# This is a simple package, its a shorthand for deploying the image and make it the default and switch immediately
+# DO NOT use this one if the deployment you are doing will change network settings (because it will deadlock as the ssh is stil active)
+
 stdenv.mkDerivation {
   pname = "Deployer";
   version = "1.0";

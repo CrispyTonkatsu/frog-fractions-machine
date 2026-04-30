@@ -1,4 +1,7 @@
 { pkgs, stdenv, ... }:
+# This is a simple package, its a shorthand for deploying the image and make it the default after rebooting
+# DO use this one if the deployment you are doing will change network settings and then reboot
+
 stdenv.mkDerivation {
   pname = "Deployer";
   version = "1.0";
