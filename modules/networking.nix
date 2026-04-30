@@ -10,6 +10,7 @@
     };
   };
 
+  # NOTE: This is what will make it have a name in the LAN
   services.avahi = {
     enable = true;
     nssmdns4 = true;
@@ -21,7 +22,7 @@
   };
 
   # Thunderbolt network
-  # TODO: Get this working so that it can be used at digipen
+  # TODO: Get this working so that it can be used at digipen without a hotspot
 
   # networking = {
   #   interfaces.thunderbolt0.ipv4.addresses = [

@@ -1,5 +1,7 @@
-{ pkgs, ... }:
+{ ... }:
 {
+  # NOTE: The core system settings
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelModules = [ "thunderbolt-net" ];
@@ -15,5 +17,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  # The GPU driver install
   hardware.graphics.enable = true;
 }
