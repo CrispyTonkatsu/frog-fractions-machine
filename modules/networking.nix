@@ -1,9 +1,5 @@
 { ... }:
 {
-  imports = [
-    ./thunderbolt-networking.nix
-  ];
-
   networking.hostName = "frog-fractions";
   networking.networkmanager.enable = true;
 
