@@ -20,4 +20,7 @@
       workstation = true;
     };
   };
+
+  # NOTE: Probably some form of wired network via a small travel router would make this work both at digipen and also faster for the RDP
+  # If that is done, there are no needed setting changes
 }
