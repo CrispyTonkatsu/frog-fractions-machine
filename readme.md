@@ -11,7 +11,7 @@ When creating a machine for solely testing it is nice to be able to deterministi
 ## Module philosophy
 The idea is that if we remove a module (except for system.nix and hardware-configuration.nix) the system should still boot and run. Please try making modules that encapsulate a whole feature that way they are easily toggleable (you could packages to have options like regular NixOS but that is overkill).
 
-## For fanta
+## For fanta (the team-mate and main user of this machine)
 This is a minimal config that is going to give you the bare minimum desktop to be able to construct your automation pipeline.
 There are several things you might want to add here so just feel free to start by reading the comments in the current files.
 Then I would recommend checking out the tutorials (see below) for more specific tasks you might need.
