@@ -30,6 +30,7 @@
           name = "frog-fractions builder";
 
           packages = with pkgs; [
+            fastfetch
             rsync
 
             (callPackage ./utils/deploy-script.nix { })
